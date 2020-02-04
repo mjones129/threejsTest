@@ -1,0 +1,24 @@
+{
+  "name": "threejstest",
+  "version": "1.0.0",
+  "description": "you heard me",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjones129/threejsTest.git"
+  },
+  "author": "Matt Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjones129/threejsTest/issues"
+  },
+  "homepage": "https://github.com/mjones129/threejsTest#readme"
+}
