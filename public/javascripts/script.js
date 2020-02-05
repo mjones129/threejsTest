@@ -3,21 +3,33 @@
 var camera, scene, renderer;
 var geometry, material, mesh;
 
+
 init();
 animate();
 
 function init() {
 
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-    camera.position.z = 1;
+    camera.position.z = 3;
 
     scene = new THREE.Scene();
 
-    geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-    material = new THREE.MeshNormalMaterial();
+    // geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+    // material = new THREE.MeshNormalMaterial();
+    //
+    // mesh = new THREE.Mesh( geometry, material );
+    // scene.add( mesh );
 
-    mesh = new THREE.Mesh( geometry, material );
-    scene.add( mesh );
+    var light = new THREE.PointLight(0xFFFFFF, 1);
+    light.position.set(0, 10, 0);
+    scene.add(light);
+
+    var loader = new THREE.GLTFLoader();
+    loader.load('/3dobjects/suzanne.glb', function(gltf) {
+      scene.add(gltf.scene);
+    }, undefined, function(error) {
+      console.error(error);
+    });
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -29,9 +41,8 @@ function animate() {
 
     requestAnimationFrame( animate );
 
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.02;
+    // mesh.rotation.x += 0.01;
+    // mesh.rotation.y += 0.05;
 
     renderer.render( scene, camera );
-
-}
+};
