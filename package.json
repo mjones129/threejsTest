@@ -1,24 +1,17 @@
 {
-  "name": "threejstest",
-  "version": "1.0.0",
-  "description": "you heard me",
-  "main": "app.js",
-  "dependencies": {
-    "ejs": "^3.0.1",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
+  "name": "express3d",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mjones129/threejsTest.git"
-  },
-  "author": "Matt Jones",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mjones129/threejsTest/issues"
-  },
-  "homepage": "https://github.com/mjones129/threejsTest#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "three": "^0.113.2"
+  }
 }
