@@ -45,7 +45,8 @@ function init() {
     });
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-
+    controls.autoRotate = true;
+    controls.enableDamping = true;
 
 }
 
@@ -56,6 +57,7 @@ function animate() {
     // mesh.rotation.x += 0.01;
     // mesh.rotation.y += 0.05;
 
+    controls.update();
     renderer.render( scene, camera );
 
 };
