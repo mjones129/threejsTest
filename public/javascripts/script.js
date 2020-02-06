@@ -44,6 +44,9 @@ function init() {
       camera.updateProjectionMatrix();
     });
 
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+
 }
 
 function animate() {
@@ -54,4 +57,5 @@ function animate() {
     // mesh.rotation.y += 0.05;
 
     renderer.render( scene, camera );
+
 };
