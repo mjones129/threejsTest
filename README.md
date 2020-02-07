@@ -14,3 +14,8 @@ you heard me
 3. `cd threejsTest`
 4. install dependencies by running `npm install`
 5. run the local server `DEBUG=threejsTest:* npm start`
+
+
+# TODO:
+
+-Take the up and down arrow functionality from OrbitControls.js and apply it to a scroll event (onscroll or wheel?)
