@@ -25,6 +25,7 @@ function init() {
     light.position.set(0, 10, 0);
     scene.add(light);
 
+
     var loader = new THREE.GLTFLoader();
     loader.load('/3dobjects/suzanne.glb', function(gltf) {
       scene.add(gltf.scene);
@@ -34,7 +35,9 @@ function init() {
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setClearColor(new THREE.Color(0x000000));
     document.body.appendChild( renderer.domElement );
+
 
     window.addEventListener('resize', function() {
       var width = window.innerWidth;
@@ -44,9 +47,17 @@ function init() {
       camera.updateProjectionMatrix();
     });
 
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.autoRotate = true;
-    controls.enableDamping = true;
+    function updateCamera (ev) {
+      camera.position.y = event.deltaY/5;
+
+    }
+
+    window.addEventListener('wheel', updateCamera);
+
+    // controls = new THREE.OrbitControls(camera, renderer.domElement);
+    // controls.autoRotate = true;
+    // controls.enableDamping = true;
+    // controls.enableZoom = false;
 
 }
 
@@ -56,8 +67,7 @@ function animate() {
 
     // mesh.rotation.x += 0.01;
     // mesh.rotation.y += 0.05;
-
-    controls.update();
+    // controls.update();
     renderer.render( scene, camera );
 
 };
