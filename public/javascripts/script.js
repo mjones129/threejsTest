@@ -1,5 +1,5 @@
 
-// import * as THREE from '/node_modules/three/build/three.module.js';
+// import * as THREE from './javascripts/three.module.js';
 
 var camera, scene, renderer;
 var geometry, material, mesh;
@@ -47,17 +47,17 @@ function init() {
       camera.updateProjectionMatrix();
     });
 
-    function updateCamera (ev) {
-      camera.position.y = event.deltaY/5;
+    // function updateCamera (ev) {
+    //   camera.position.y = event.deltaY/50;
+    // }
+    //
+    // window.addEventListener('wheel', updateCamera);
 
-    }
-
-    window.addEventListener('wheel', updateCamera);
-
-    // controls = new THREE.OrbitControls(camera, renderer.domElement);
-    // controls.autoRotate = true;
-    // controls.enableDamping = true;
-    // controls.enableZoom = false;
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.autoRotate = true;
+    controls.enableDamping = true;
+    controls.enableZoom = false;
+    controls.screenSpacePanning = true;
 
 }
 
@@ -67,7 +67,7 @@ function animate() {
 
     // mesh.rotation.x += 0.01;
     // mesh.rotation.y += 0.05;
-    // controls.update();
+    controls.update();
     renderer.render( scene, camera );
 
 };
