@@ -1,5 +1,5 @@
 # threejsTest
-you heard me
+Testing repo for creating an interactive threejs web and mobile experience.
 
 ## To run this, you'll need a few things:
 
