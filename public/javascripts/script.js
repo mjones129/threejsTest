@@ -47,17 +47,12 @@ function init() {
       camera.updateProjectionMatrix();
     });
 
-    // function updateCamera (ev) {
-    //   camera.position.y = event.deltaY/50;
-    // }
-    //
-    // window.addEventListener('wheel', updateCamera);
+    window.addEventListener("wheel", event => {
+  const delta = Math.sign(event.deltaY);
+  camera.position.y += delta;
+  console.info(delta);
+});
 
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.autoRotate = true;
-    controls.enableDamping = true;
-    controls.enableZoom = false;
-    controls.screenSpacePanning = true;
 
 }
 
@@ -65,9 +60,6 @@ function animate() {
 
     requestAnimationFrame( animate );
 
-    // mesh.rotation.x += 0.01;
-    // mesh.rotation.y += 0.05;
-    controls.update();
     renderer.render( scene, camera );
 
 };
