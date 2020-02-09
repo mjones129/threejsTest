@@ -20,6 +20,8 @@ Testing repo for creating an interactive threejs web and mobile experience.
 
 -~~Take the up and down arrow functionality from OrbitControls.js and apply it to a scroll event (onscroll or wheel?)~~
 
+-Smooth camera movement on scroll
+
 -Fade up/animate text on load (part of threejs scene, not HTML overlay)
 
 -Use camera.position.y value to trigger animations all along the page
