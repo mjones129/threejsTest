@@ -48,7 +48,7 @@ function init() {
     });
 
     window.addEventListener("wheel", event => {
-  const delta = Math.sign(event.deltaY);
+  const delta = (Math.sign(event.deltaY) / 10);
   camera.position.y += delta;
   console.info(delta);
 });
