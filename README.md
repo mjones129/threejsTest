@@ -20,6 +20,10 @@ Testing repo for creating an interactive threejs web and mobile experience.
 
 -~~Take the up and down arrow functionality from OrbitControls.js and apply it to a scroll event (onscroll or wheel?)~~
 
+-Apply animated caustics material to objects in the scene
+
+[Caustics Demo](https://threejs.org/examples/#webgl_loader_nodes) | [Caustics Source Code](https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_nodes.html)
+
 -Smooth camera movement on scroll
 
 -Fade up/animate text on load (part of threejs scene, not HTML overlay)
