@@ -29,3 +29,13 @@ Testing repo for creating an interactive threejs web and mobile experience.
 -Fade up/animate text on load (part of threejs scene, not HTML overlay)
 
 -Use camera.position.y value to trigger animations all along the page
+
+## Tristan Update:
+
+Yo!
+
+So I was chatting with GFC Adam about action steps to get this project in front of the lead team and get some feedback on it. GFC is kinda known for moving fast, and I figured the biggest thing standing between us and making these web app projects a reality for GFC is [aphantasia.](https://en.wikipedia.org/wiki/Aphantasia) So I went ahead and threw together a [rough animation](https://youtu.be/GM-NKDObIRY) to help people see what's possible with WebGL.
+
+No interactivity yet, it's just for looks, but hopefully that helps people see the possibilities an applications. That animation was pitched to the lead creative pastor yesterday (Feb 11), and he really loved the preview. He'll pitch the concept to the rest of the lead team tomorrow (Feb 13) and we'll have a clearer picture of project goals what to expect moving forward.
+
+Basically, this repo is on hold at the moment until we get an official target to aim for. First thoughts were Easter, but it might be too soon to try something. More than likely Christmas 2020 will be a good target for a project like this. Stay tuned!
