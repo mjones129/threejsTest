@@ -15,12 +15,6 @@ function init() {
 
     scene = new THREE.Scene();
 
-    // geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-    // material = new THREE.MeshNormalMaterial();
-    //
-    // mesh = new THREE.Mesh( geometry, material );
-    // scene.add( mesh );
-
     var light = new THREE.PointLight(0xFFFFFF, 1);
     light.position.set(0, 10, 0);
     scene.add(light);
