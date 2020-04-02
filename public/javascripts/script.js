@@ -28,6 +28,9 @@ function init() {
     });
 
     loader.load('/3dobjects/splash.glb', function(gltf) {
+      gltf.scene.scale.set(3,3,3);
+      gltf.scene.position.set(0,3,0);
+      gltf.scene.rotation.set(0,20,0);
       scene.add(gltf.scene);
     }, undefined, function(error) {
       console.error(error);
