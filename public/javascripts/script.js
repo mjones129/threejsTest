@@ -27,6 +27,12 @@ function init() {
       console.error(error);
     });
 
+    loader.load('/3dobjects/splash.glb', function(gltf) {
+      scene.add(gltf.scene);
+    }, undefined, function(error) {
+      console.error(error);
+    });
+
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.setClearColor(new THREE.Color(0x000000));
