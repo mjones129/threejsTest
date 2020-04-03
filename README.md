@@ -31,6 +31,3 @@ Testing repo for creating an interactive threejs web and mobile experience.
 
 -Use camera.position.y value to trigger animations all along the page
 
-## Just a minor note:
-
-I updated the git config to include a username and email
